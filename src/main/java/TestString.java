@@ -34,7 +34,8 @@ public class TestString {
             JSONArray jsonArray =(JSONArray) resultObj.get(str);
             map.put(str,(JSONArray) resultObj.get(str));
         }
-        System.out.println(map);
+        JSONArray jsonArray = map.get("qtcl");
+        List<User> users = JSONObject.parseArray(jsonArray.toJSONString(), User.class);
     }
 
     private static Map<String, Object> getAllElements(List<Element> childElements,Map<String,Object> mapEle) {
