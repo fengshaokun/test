@@ -1,8 +1,16 @@
-public class User {
+public class Qtcl {
 
 
     private  String cl;
     private  String sb;
+
+    @Override
+    public String toString() {
+        return "Qtcl{" +
+                "cl='" + cl + '\'' +
+                ", sb='" + sb + '\'' +
+                '}';
+    }
 
     public String getCl() {
         return cl;

@@ -29,13 +29,13 @@ public class TestString {
         String result = mapEle.get("result").toString();
         JSONObject jsonObject= JSONObject.parseObject(result);
         JSONObject resultObj = (JSONObject) jsonObject.get("result");
-        Map<String,JSONArray>map = new HashMap<String, JSONArray>();
+     /*   Map<String,JSONArray>map = new HashMap<String, JSONArray>();
         for(String str:resultObj.keySet()){
-            JSONArray jsonArray =(JSONArray) resultObj.get(str);
             map.put(str,(JSONArray) resultObj.get(str));
-        }
-        JSONArray jsonArray = map.get("qtcl");
-        List<User> users = JSONObject.parseArray(jsonArray.toJSONString(), User.class);
+        }*/
+        JSONArray jsonArray =(JSONArray) resultObj.get("qtcl");
+        List<Qtcl> qtcls = JSONObject.parseArray(jsonArray.toJSONString(), Qtcl.class);
+        System.out.println(qtcls);
     }
 
     private static Map<String, Object> getAllElements(List<Element> childElements,Map<String,Object> mapEle) {
